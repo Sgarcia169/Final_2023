@@ -26,15 +26,184 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 ## Males
 
+$H_0$ There is no difference between
 
-## Females
+$H_A$ There is a difference between
+
+```{r}
+library(dplyr)
+Males = filter(FinalData, FinalData$sex == 'M')
+```
+
+## Methods
+
+## Descriptive Results 
+
+## Graphical Results
+
+```{r}
+barchartGC(~infected + treatment,data=Males)
+barchartGC(~infected + treatment,data=Males, type="percent")
+```
+
+## Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+## Graphical Descriptive Result
+
+catergorical~categorical
+
+table1 <- xtabs(~class + Sex, data=druggiesData)
+
+## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 
-## LGBTQ
+# Females
+
+$H_0$ There is no difference between
+
+$H_A$ There is a difference
+
+```{r}
+library(dplyr)
+Females = filter(FinalData, FinalData$sex == 'F')
+```
+
+## Methods
+
+## Descriptive Results 
+
+## Graphical Results
+
+```{r}
+barchartGC(~infected + treatment,data=Males)
+barchartGC(~infected + treatment,data=Males, type="percent")
+```
+
+## Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
 
 
 
-## Druggies
+```{r}
+library(dplyr)
+LGBTQ = filter(FinalData, FinalData$LGBTQ == 'gay')
+head(LGBTQ)
+```
 
+
+table1 <- xtabs(~class + Sex, data=davisdata)
+
+## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+# LGBTQ
+
+$H_0$ There is no difference
+
+$H_A$ There is a difference
+
+```{r}
+library(dplyr)
+LGBTQ = filter(FinalData, FinalData$sex == 'gay')
+```
+
+## Methods
+
+## Results
+
+## Descriptive Results 
+
+## Graphical Results
+
+```{r}
+barchartGC(~infected + treatment,data=Males)
+barchartGC(~infected + treatment,data=Males, type="percent")
+```
+## Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=LGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
+```{r}
+druggies$infected = factor(druggies$infected, c('none', 'aids'))
+fisher.test(druggies$treatment,druggies$infected)
+```
+
+table1 <- xtabs(~class + Sex, data=davisdata)
+
+## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+# Druggies
+
+$H_0$ There is no difference between 
+
+$H_A$ There is a difference between 
+
+```{r}
+library(dplyr)
+DrugUsers = filter(FinalData, FinalData$DrugUser == 'yes')
+```
+
+## Methods
+
+## Descriptive Results 
+
+## Graphical Results
+
+```{r}
+barchartGC(~infected + treatment,data=Males)
+barchartGC(~infected + treatment,data=Males, type="percent")
+```
+
+
+## Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Overall Results and Conclusions
+
