@@ -26,9 +26,9 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 ## Males
 
-$H_0$ There is no difference between
+$H_0$ There is no difference between the affect of the covid921 to male population.
 
-$H_A$ There is a difference between
+$H_A$ There is a difference between the affect of the covid921 test trials on male population.
 
 ```{r}
 library(dplyr)
@@ -71,9 +71,9 @@ fisher.test(table1)
 
 # Females
 
-$H_0$ There is no difference between
+$H_0$ There is no difference between the affect of the covid921 to female population.
 
-$H_A$ There is a difference
+$H_A$ There is a difference between the affect of the covid921 test trials on female population.
 
 ```{r}
 library(dplyr)
@@ -121,18 +121,16 @@ fisher.test(table1)
 
 # LGBTQ
 
-$H_0$ There is no difference
+$H_0$ There is no difference between the affect of the covid921 to LGBTQ population.
 
-$H_A$ There is a difference
+$H_A$ There is a difference between the affect of the covid921 test trials on LGBTQ population.
 
 ```{r}
 library(dplyr)
-LGBTQ = filter(FinalData, FinalData$sex == 'gay')
+LGBTQ = filter(FinalData, FinalData$LGBTQ == "gay")
 ```
 
 ## Methods
-
-## Results
 
 ## Descriptive Results 
 
@@ -150,10 +148,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-```{r}
-druggies$infected = factor(druggies$infected, c('none', 'aids'))
-fisher.test(druggies$treatment,druggies$infected)
-```
+
 
 table1 <- xtabs(~class + Sex, data=davisdata)
 
@@ -168,9 +163,9 @@ fisher.test(table1)
 
 # Druggies
 
-$H_0$ There is no difference between 
+$H_0$ There is no difference between the affect of the covid921 to druggies population.
 
-$H_A$ There is a difference between 
+$H_A$ There is a difference between the affect of the covid921 test trials on druggies population.
 
 ```{r}
 library(dplyr)
