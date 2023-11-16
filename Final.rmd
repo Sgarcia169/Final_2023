@@ -37,6 +37,8 @@ Males = filter(FinalData, FinalData$sex == 'M')
 
 ## Methods
 
+Males is the categorical variable, Covid921 vaccine administration is the explanatory variable. Covid921s effectiveness is a response variable, therefore we utilize cat~cat helper file. 
+
 ## Descriptive Results 
 
 ## Graphical Results
@@ -81,6 +83,8 @@ Females = filter(FinalData, FinalData$sex == 'F')
 ```
 
 ## Methods
+
+Females is the categorical variable, Covid921 vaccine administration is the explanatory variable. Covid921s effectiveness is a response variable, therefore we utilize cat~cat helper file. 
 
 ## Descriptive Results 
 
@@ -132,6 +136,8 @@ LGBTQ = filter(FinalData, FinalData$LGBTQ == "gay")
 
 ## Methods
 
+LGBTQ is the categorical variable, Covid921 vaccine administration is the explanatory variable. Covid921s effectiveness is a response variable, therefore we utilize cat~cat helper file. 
+
 ## Descriptive Results 
 
 ## Graphical Results
@@ -173,6 +179,8 @@ DrugUsers = filter(FinalData, FinalData$DrugUser == 'yes')
 ```
 
 ## Methods
+
+Druggies is the categorical variable, Covid921 vaccine administration is the explanatory variable. Covid921s effectiveness is a response variable, therefore we utilize cat~cat helper file. 
 
 ## Descriptive Results 
 
