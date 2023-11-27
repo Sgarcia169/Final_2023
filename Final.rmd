@@ -204,6 +204,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+According to this table the percentage of DrugUsers that were infected with the placebo were 8 times less  likely to become infected. The drug was a whole lot less effective than those who got the placebo. Those who did not receive the drug (none) had a 5-50% chance of becoming infected.
+
 ## Inferential Results
 
 ```{r}
@@ -212,5 +214,11 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+
+You are almost 1.5 times more likely to catch COVID if you were to get the vaccine. 
+
+
 # Overall Results and Conclusions
 
+Does the vaccine prove to be effective in different effectiveness across a variety of sub-population? According to the males and females chisq test which resulted in a P value less than 0.05. Therefore we reject the null hypothesis. The vaccine is effective in preventing COVID921 for those two groups. Conversely, according to the LGBTQ and DrugUsers chisq test which resulted in a P value less than 0.05. Therefore, we reject the null hypothesis. The vaccine is less effective when it comes to preventing COVID921. The last two groups are 8 times more likely to contract COVID921 when given the vaccine. Those who received the placebo are significantly less likely to contract COVID921. 
