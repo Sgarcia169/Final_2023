@@ -48,10 +48,12 @@ barchartGC(~infected + treatment,data=Males)
 barchartGC(~infected + treatment,data=Males, type="percent")
 ```
 
+This bar graph shows among the males who received the placebo had a higher percentage of getting Covid19. Compared to males who received the vaccine, the people had a significant.
+
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=FinalData)
+table1 <- xtabs(~infected + treatment, data=Males)
 rowPerc(table1)
 colPerc(table1)
 ```
@@ -91,14 +93,16 @@ Females is the categorical variable, Covid921 vaccine administration is the expl
 ## Graphical Results
 
 ```{r}
-barchartGC(~infected + treatment,data=Males)
-barchartGC(~infected + treatment,data=Males, type="percent")
+barchartGC(~infected + treatment,data=Females)
+barchartGC(~infected + treatment,data=Females, type="percent")
 ```
+
+This bar graph shows among the females who received the placebo had a higher percentage of getting Covid19. Compared to males who received the vaccine, those females had a significant.
 
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=FinalData)
+table1 <- xtabs(~infected + treatment, data=Females)
 rowPerc(table1)
 colPerc(table1)
 ```
@@ -143,9 +147,12 @@ LGBTQ is the categorical variable, Covid921 vaccine administration is the explan
 ## Graphical Results
 
 ```{r}
-barchartGC(~infected + treatment,data=Males)
-barchartGC(~infected + treatment,data=Males, type="percent")
+barchartGC(~infected + treatment,data=LGBTQ)
+barchartGC(~infected + treatment,data=LGBTQ, type="percent")
 ```
+
+This bar graph shows among the LGBTQ who received the vaccineo had a higher percentage of getting Covid19. Compared to LGBTQ who received the placebo, those LGBTQ had a lower chance of catching covid19. Those who never caught covid had little change. 
+
 ## Numerical Results
 
 ```{r}
@@ -187,15 +194,16 @@ Druggies is the categorical variable, Covid921 vaccine administration is the exp
 ## Graphical Results
 
 ```{r}
-barchartGC(~infected + treatment,data=Males)
-barchartGC(~infected + treatment,data=Males, type="percent")
+barchartGC(~infected + treatment,data=DrugUsers)
+barchartGC(~infected + treatment,data=DrugUsers, type="percent")
 ```
 
+This bar graph shows among the DrugUsers who received the vaccine had a higher percentage of getting Covid19. Compared to DrugUsers who received the placebo, those druggies had a lower chance of catching covid19. Those who never caught covid had little change. 
 
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=FinalData)
+table1 <- xtabs(~infected + treatment, data=DrugUsers)
 rowPerc(table1)
 colPerc(table1)
 ```
