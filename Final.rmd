@@ -41,7 +41,7 @@ Males is the categorical variable, Covid921 vaccine administration is the explan
 
 ## Descriptive Results 
 
-## Graphical Results
+## Graphical Descriptive Results
 
 ```{r}
 barchartGC(~infected + treatment,data=Males)
@@ -58,11 +58,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-## Graphical Descriptive Result
-
-catergorical~categorical
-
-table1 <- xtabs(~class + Sex, data=druggiesData)
+According to this table the percentage of males that were infected with the placebo were 2 times more likely to become infected. The drug was a whole lot more effective than those who did not get vaccine. Those who did not receive the drug (none) had a 50% chance of becoming infected.
 
 ## Inferential Results
 
@@ -72,6 +68,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The P value is 0.000000000232, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+
+You are almost 2.24 times more likely to be protected from getting COVID vaccine compared to those who didn't.
 
 # Females
 
@@ -90,14 +89,14 @@ Females is the categorical variable, Covid921 vaccine administration is the expl
 
 ## Descriptive Results 
 
-## Graphical Results
+## Graphical Descriptive Results
 
 ```{r}
 barchartGC(~infected + treatment,data=Females)
 barchartGC(~infected + treatment,data=Females, type="percent")
 ```
 
-This bar graph shows among the females who received the placebo had a higher percentage of getting Covid19. Compared to males who received the vaccine, those females had a significant.
+This bar graph shows among the females who received the placebo had a higher percentage of getting Covid19. Compared to Females who received the vaccine, those females had a significant. It was a 50-50 chance for those who never caught Covid.
 
 ## Numerical Results
 
@@ -107,16 +106,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+According to this table the percentage of Females that were infected with the placebo were 1-1/2 times more likely to become infected. The drug was a whole lot more effective than those who did not get vaccine. Those who did not receive the drug (none) had a 50% chance of becoming infected. Unfortunately, they had a high chance of attracting the virus at 55% chance overall. 
 
-
-```{r}
-library(dplyr)
-LGBTQ = filter(FinalData, FinalData$LGBTQ == 'gay')
-head(LGBTQ)
-```
-
-
-table1 <- xtabs(~class + Sex, data=davisdata)
 
 ## Inferential Results
 
@@ -126,6 +117,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The P value is 0.00002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+
+You are almost 1.5 times more likely to be protected from getting COVID vaccine compared to those who didn't. 
 
 # LGBTQ
 
@@ -147,11 +141,11 @@ LGBTQ is the categorical variable, Covid921 vaccine administration is the explan
 ## Graphical Results
 
 ```{r}
-barchartGC(~infected + treatment,data=LGBTQ)
-barchartGC(~infected + treatment,data=LGBTQ, type="percent")
+barchartGC(~infected + treatment,data= LGBTQ)
+barchartGC(~infected + treatment,data= LGBTQ, type="percent")
 ```
 
-This bar graph shows among the LGBTQ who received the vaccineo had a higher percentage of getting Covid19. Compared to LGBTQ who received the placebo, those LGBTQ had a lower chance of catching covid19. Those who never caught covid had little change. 
+This bar graph shows among the LGBTQ who received the vaccine had a higher percentage of getting Covid19. Compared to LGBTQ who received the placebo, those LGBTQ had a lower chance of catching covid19. Those who never caught covid had little change. 
 
 ## Numerical Results
 
@@ -161,9 +155,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+According to this table the percentage of LGBTQ that were infected with the vaccine had a 84% chance of more likely to become infected. The drug was a whole a lot less effective than those who did not get vaccine. Those who receive the placebo drug (none) had a greater chance of not becoming infected.
 
-
-table1 <- xtabs(~class + Sex, data=davisdata)
 
 ## Inferential Results
 
@@ -173,6 +166,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+
+You are almost 1.5 times more likely to get COVID with the vaccine compared to those who didn't.  
 
 # Druggies
 
