@@ -70,7 +70,12 @@ fisher.test(table1)
 
 The P value is 0.00000000000101, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 2.24 times more likely to be protected from getting COVID vaccine compared to those who didn't.
+```{r}
+Males$infected = factor(Males$infected, c('OK', 'covid19'))
+fisher.test(Males$treatment, Males$infected)
+```
+
+You are almost 0.446 times more likely to be protected from getting COVID vaccine compared to those who didn't.
 
 # Females
 
@@ -119,7 +124,12 @@ fisher.test(table2)
 
 The P value is 0.00002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 1.5 times more likely to be protected from getting COVID with the vaccine compared to those who didn't. 
+```{r}
+Females$infected = factor(Females$infected, c('OK', 'covid19'))
+fisher.test(Females$treatment, Females$infected)
+```
+
+You are almost 0.67 times more likely to be protected from getting COVID with the vaccine compared to those who didn't. 
 
 # LGBTQ
 
@@ -168,7 +178,12 @@ fisher.test(table3)
 
 The P value is 0.0000000067, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 0.1818 times more likely to get COVID with the vaccine compared to those who didn't.  
+```{r}
+LGBTQ$infected = factor(LGBTQ$infected, c('OK', 'covid19'))
+fisher.test(LGBTQ$treatment, LGBTQ$infected)
+```
+
+You are 5.5 times more likely to get COVID with the vaccine compared to those who received the placebo.  
 
 # Druggies
 
@@ -216,9 +231,14 @@ fisher.test(table4)
 
 The P value is 0.000000002842, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 0.126 times more likely to catch COVID if you were to get the vaccine. 
+```{r}
+DrugUsers$infected = factor(DrugUsers$infected, c('OK', 'covid19'))
+fisher.test(DrugUsers$treatment, DrugUsers$infected)
+```
+
+You are 7.94 times more likely to catch COVID if you were to get the vaccine compared to those who received the placebo. 
 
 
 # Overall Results and Conclusions
 
-Does the vaccine prove to be effective in different effectiveness across a variety of sub-population? According to the males and females chisq test which resulted in a P value less than 0.05. Therefore we reject the null hypothesis. The vaccine is effective in preventing COVID921 for those two groups. Conversely, according to the LGBTQ and DrugUsers chisq test which resulted in a P value less than 0.05. Therefore, we reject the null hypothesis. The vaccine is less effective when it comes to preventing COVID921. The last two groups are 8 times more likely to contract COVID921 when given the vaccine. Those who received the placebo are significantly less likely to contract COVID921. 
+Does the vaccine prove to be effective in different effectiveness across a variety of sub-population? According to the males and females chisq test which resulted in a P value less than 0.05. Therefore we reject the null hypothesis. The vaccine is more effective in preventing COVID921 for those two groups (male & female). For the male and female group, it would be beneficial to get the vaccine because it had a better chance of preventing contacting covid921. Conversely, according to the LGBTQ and DrugUsers chisq test which resulted in a P value less than 0.05. Therefore, we reject the null hypothesis for both of them. The vaccine for the LGBTQ community 5.5 times more likely to catch covid921 and the DrugUsers are 7.94 times more likely if they were to receive the vaccine. The vaccine was significantely less effective when it comes to preventing COVID921 for the LGBTQ/DrugUsers. The last two groups are 8 times more likely to contract COVID921 when given the vaccine. Those who received the placebo are significantly less likely to contract COVID921. 
