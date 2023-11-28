@@ -68,7 +68,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The P value is 0.000000000232, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+The P value is 0.00000000000101, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
 You are almost 2.24 times more likely to be protected from getting COVID vaccine compared to those who didn't.
 
@@ -106,7 +106,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
-According to this table the percentage of Females that were infected with the placebo were 1-1/2 times more likely to become infected. The drug was a whole lot more effective than those who did not get vaccine. Those who did not receive the drug (none) had a 50% chance of becoming infected. Unfortunately, they had a high chance of attracting the virus at 55% chance overall. 
+According to this table the percentage of Females that were infected with the placebo were 1-1/2 times more likely to become infected. The drug vaccine was a whole lot more effective than those who received the placebo. Those who did not receive the drug (none) had a 50% chance of becoming infected. Unfortunately, they had a high chance of attracting the virus at 55% chance overall for those who never caught the virus.  
 
 
 ## Inferential Results
@@ -119,7 +119,7 @@ fisher.test(table2)
 
 The P value is 0.00002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 1.5 times more likely to be protected from getting COVID vaccine compared to those who didn't. 
+You are almost 1.5 times more likely to be protected from getting COVID with the vaccine compared to those who didn't. 
 
 # LGBTQ
 
@@ -155,7 +155,7 @@ rowPerc(table3)
 colPerc(table3)
 ```
 
-According to this table the percentage of LGBTQ that were infected with the vaccine had a 84% chance of more likely to become infected. The drug was a whole a lot less effective than those who did not get vaccine. Those who receive the placebo drug (none) had a greater chance of not becoming infected.
+According to this table the percentage of LGBTQ that received the vaccine had a higher chance of 84%to become infected with the virus. Those who receive the placebo drug (none) had a greater chance of not becoming infected. Those who were (ok) had a 50/50 chance of catching the virus.
 
 
 ## Inferential Results
@@ -166,9 +166,9 @@ chisqtestGC(table3)
 fisher.test(table3)
 ```
 
-The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+The P value is 0.0000000067, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 1.5 times more likely to get COVID with the vaccine compared to those who didn't.  
+You are almost 0.1818 times more likely to get COVID with the vaccine compared to those who didn't.  
 
 # Druggies
 
@@ -204,7 +204,7 @@ rowPerc(table4)
 colPerc(table4)
 ```
 
-According to this table the percentage of DrugUsers that were infected with the placebo were 8 times less  likely to become infected. The drug was a whole lot less effective than those who got the placebo. Those who did not receive the drug (none) had a 5-50% chance of becoming infected.
+According to this table the percentage of DrugUsers that were infected with the placebo were 8 times less  likely to become infected. The drug was a whole lot less effective in preventing the virus for those who got the placebo. Those who did not receive the drug (none) had a 50/50 chance of becoming infected.
 
 ## Inferential Results
 
@@ -214,9 +214,9 @@ chisqtestGC(table4)
 fisher.test(table4)
 ```
 
-The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
+The P value is 0.000000002842, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
 
-You are almost 1.5 times more likely to catch COVID if you were to get the vaccine. 
+You are almost 0.126 times more likely to catch COVID if you were to get the vaccine. 
 
 
 # Overall Results and Conclusions
