@@ -26,7 +26,7 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 ## Males
 
-$H_0$ There is no difference between the affect of the covid921 to male population.
+$H_0$ There is no difference between the affect of the covid921 to male population. 
 
 $H_A$ There is a difference between the affect of the covid921 test trials on male population.
 
