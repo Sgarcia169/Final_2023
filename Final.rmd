@@ -101,9 +101,9 @@ This bar graph shows among the females who received the placebo had a higher per
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=Females)
-rowPerc(table1)
-colPerc(table1)
+table2 <- xtabs(~infected + treatment, data=Females)
+rowPerc(table2)
+colPerc(table2)
 ```
 
 According to this table the percentage of Females that were infected with the placebo were 1-1/2 times more likely to become infected. The drug was a whole lot more effective than those who did not get vaccine. Those who did not receive the drug (none) had a 50% chance of becoming infected. Unfortunately, they had a high chance of attracting the virus at 55% chance overall. 
@@ -112,9 +112,9 @@ According to this table the percentage of Females that were infected with the pl
 ## Inferential Results
 
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
 ```
 
 The P value is 0.00002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
@@ -150,9 +150,9 @@ This bar graph shows among the LGBTQ who received the vaccine had a higher perce
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=LGBTQ)
-rowPerc(table1)
-colPerc(table1)
+table3 <- xtabs(~infected + treatment, data=LGBTQ)
+rowPerc(table3)
+colPerc(table3)
 ```
 
 According to this table the percentage of LGBTQ that were infected with the vaccine had a 84% chance of more likely to become infected. The drug was a whole a lot less effective than those who did not get vaccine. Those who receive the placebo drug (none) had a greater chance of not becoming infected.
@@ -161,9 +161,9 @@ According to this table the percentage of LGBTQ that were infected with the vacc
 ## Inferential Results
 
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table3)
+chisqtestGC(table3)
+fisher.test(table3)
 ```
 
 The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
@@ -199,9 +199,9 @@ This bar graph shows among the DrugUsers who received the vaccine had a higher p
 ## Numerical Results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=DrugUsers)
-rowPerc(table1)
-colPerc(table1)
+table4 <- xtabs(~infected + treatment, data=DrugUsers)
+rowPerc(table4)
+colPerc(table4)
 ```
 
 According to this table the percentage of DrugUsers that were infected with the placebo were 8 times less  likely to become infected. The drug was a whole lot less effective than those who got the placebo. Those who did not receive the drug (none) had a 5-50% chance of becoming infected.
@@ -209,9 +209,9 @@ According to this table the percentage of DrugUsers that were infected with the 
 ## Inferential Results
 
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table4)
+chisqtestGC(table4)
+fisher.test(table4)
 ```
 
 The P value is 0.0002732, which is below 0.05, so we reject the null hypothesis. This indicates that there is a difference among those who receive the drug and those who do not. 
